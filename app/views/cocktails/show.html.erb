@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-between">
+  <div>
+    <h1><%= @cocktail.name %></h1>
+
+    <h3>Description: <%= @cocktail.description %></h3>
+
+    <h3>Ingredients</h3>
+
+    <ul class="list-group">
+      <% @cocktail.doses.each do |dose| %>
+        <li class="list-group-item">
+        <%= dose.description %> - <%= dose.ingredient.name %>
+        <%= link_to '(delete)', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+        </li>
+      <% end %>
+    </ul>
+
+    <%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail) %>
+  </div>
+
+  <div>
+    <img src="<%= @cocktail.img_url %>", alt="mojito", style="width: 500px; height: 700px; object-fit: cover;">
+  </div>
+</div>
+

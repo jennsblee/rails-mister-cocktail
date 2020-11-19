@@ -1,0 +1,22 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80);">
+  <div class="container">
+    <h1>Cocktail Collection</h1>
+    <p>your personalized book of cocktail recipes</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card col-6 m-3" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title"><%= cocktail.name %></h3>
+        <%= link_to 'see recipe', cocktail_path(cocktail), class: "card-link" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
