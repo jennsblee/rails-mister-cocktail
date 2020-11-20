@@ -1,25 +1,27 @@
-<div class="d-flex justify-content-between">
-  <div>
-    <h1><%= @cocktail.name %></h1>
+<div class="show d-flex justify-content-between align-items-center">
+  <div class="container m-4">
+    <h1 class="show-header"><%= @cocktail.name %></h1>
 
-    <h3>Description: <%= @cocktail.description %></h3>
+    <div class="body">
+      <h4 class="mb-3"><strong>Description:</strong>  <%= @cocktail.description %></h4>
 
-    <h3>Ingredients</h3>
+      <h4 style="text-decoration: underline;"><strong>Ingredients</strong></h4>
 
-    <ul class="list-group">
-      <% @cocktail.doses.each do |dose| %>
-        <li class="list-group-item">
-        <%= dose.description %> - <%= dose.ingredient.name %>
-        <%= link_to '(delete)', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-        </li>
-      <% end %>
-    </ul>
+      <ul class="list-group m-0 p-0">
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+          <%= dose.description %> - <%= dose.ingredient.name %>
+          <%= link_to '(delete)', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+          </li>
+        <% end %>
+      </ul>
 
-    <%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail) %>
+      <%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail) %>
+    </div>
   </div>
 
-  <div>
-    <img src="<%= @cocktail.img_url %>", alt="mojito", style="width: 500px; height: 700px; object-fit: cover;">
+  <div class="drink">
+    <img src="<%= @cocktail.img_url %>", alt="mojito", style="width: 500px; height: 600px; object-fit: cover;">
   </div>
 </div>
 

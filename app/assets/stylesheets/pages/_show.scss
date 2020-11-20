@@ -1,0 +1,40 @@
+.show {
+  background-image: linear-gradient(to right, #f2dcbb , #f0ece3);
+  text-align: center;
+}
+
+.body {
+  border-radius: 5px;
+  box-shadow: 0 0 5px;
+  background-color: #f0ece3;
+  padding: 40px;
+}
+
+.show-header {
+  margin-bottom: 10px;
+  color: #555555;
+  font-size: 80px;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+
+h4 {
+  font-family: 'Smythe', cursive;
+  color: #4a3f35;
+}
+
+.list-group {
+  list-style-type: none;
+  padding: 30px;
+}
+
+a {
+  color: #b9ac92;
+
+  &:hover {
+    color: #838383;
+  }
+}
+
+.drink {
+  background-image: linear-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 75%);
+}

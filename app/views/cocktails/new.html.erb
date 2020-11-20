@@ -1,5 +1,8 @@
-<%= simple_form_for(@cocktail) do  |c|%>
-  <%= c.input :name %>
-  <%= c.input :description %>
-  <%= c.button :submit, "CREATE" %>
-<% end %>
+
+<div class="container form">
+  <%= simple_form_for(@cocktail) do  |c|%>
+    <%= c.input :name %>
+    <%= c.input :description %>
+    <%= c.button :submit, "CREATE", class: "button" %>
+  <% end %>
+</div>
