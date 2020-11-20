@@ -1,14 +1,15 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
   transition: 0.5s background-color ease;
+  background-color: #323232;
 
   a {
-    color: transparent;
+    color: #e8e4e1;
   }
 
   .navbar-brand {
-    color: transparent;
+    font-size: 25px;
+    color: #e8e4e1;
   }
 }
 
@@ -17,7 +18,18 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 30px;
+}
+
+.transparent {
+  background-color: transparent;
+  a {
+    color: transparent;
+  }
+
+  .navbar-brand {
+    color: transparent;
+  }
 }
 
 .navbar-lewagon-white {
