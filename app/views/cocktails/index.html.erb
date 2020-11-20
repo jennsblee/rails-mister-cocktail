@@ -1,17 +1,16 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1564957468535-e8e51b0d2f56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60);">
   <div class="container">
-    <h1>Cocktail Collection</h1>
-    <p>your personalized book of cocktail recipes</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <h1>cocktail collection</h1>
+    <%= link_to "design your own concoction", new_cocktail_path, class: "button-brown" %>
   </div>
 </div>
 
 
 
-<div class="cards">
+<div class="cards d-flex row justify-content-center">
   <% @cocktails.each do |cocktail| %>
-    <div class="card col-6 m-3" style="width: 18rem;">
+    <div class="card col-4 m-3">
       <div class="card-body">
         <h3 class="card-title"><%= cocktail.name %></h3>
         <%= link_to 'see recipe', cocktail_path(cocktail), class: "card-link" %>
@@ -20,3 +19,4 @@
   <% end %>
 </div>
 
+<!-- https://images.unsplash.com/photo-1594584697907-4181579de394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80 -->
