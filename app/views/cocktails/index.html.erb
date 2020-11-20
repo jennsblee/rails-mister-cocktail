@@ -10,7 +10,7 @@
 
 <div class="cards d-flex row justify-content-center">
   <% @cocktails.each do |cocktail| %>
-    <div class="card col-4 m-3">
+    <div class="card col-4 m-5">
       <div class="card-body">
         <h3 class="card-title"><%= cocktail.name %></h3>
         <%= link_to 'see recipe', cocktail_path(cocktail), class: "card-link" %>
